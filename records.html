@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>vue</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="css/records.css">
+
+</head>
+<body>
+<div class="root">
+
+    <div id="content">
+
+
+        <div class="hide">
+
+            <div class="d1">
+                <img class="i1" src="images/left.png" width="30px" height="30px" v-on:click="leftClick"/>
+                <p id="app" class="i1">{{ message }} </p>
+                <img class="i1" src="images/right.png" width="30px" height="30px" v-on:click="rightClick"/>
+            </div>
+
+
+
+            <table border="1px" id="example-1" >
+
+
+
+                <tr v-for ="items in itemss">
+                    <td  width="20%">
+                        <div class="box">
+                            <img  width="100%"  v-bind:src="items.items[0].path"  v-on:click="gotoImg($event)"/>
+                        </div>
+                    </td>
+                    <td  width="20%" >
+                        <div class="box">
+                            <img  width="100%"  v-bind:src="items.items[1].path"  v-on:click="gotoImg($event)"/>
+                        </div>
+                    </td>
+                    <td  width="20%"  >
+                        <div class="box" >
+                            <img  width="100%"  v-bind:src="items.items[2].path"  v-on:click="gotoImg($event)"/>
+                        </div>
+                    </td>
+                    <td  width="20%"  >
+                        <div class="box">
+                            <img  width="100%"  v-bind:src="items.items[3].path"  v-on:click="gotoImg($event)"/>
+                        </div>
+                    </td>
+                    <td  width="20%"  >
+                        <div class="box">
+                            <img  width="100%"  v-bind:src="items.items[4].path"  v-on:click="gotoImg($event)"/>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            </div>
+
+
+        <div class="hide">
+            3333333333333333
+        </div>
+
+        <div class="hide">
+            444444444444444
+        </div>
+    </div>
+
+<script src="js/records.js"></script>
+</body>
+</html>
